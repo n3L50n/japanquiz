@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.japanquiz.android.japanquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/welcome_text"/>
+
+        <ImageView
+        android:background="@drawable/welcome"
+        android:id="@+id/welcome_image_view"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
+        <View
+            style="@style/DividerStyle"/>
+
+        <TextView
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/capital_question_text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/enter_city_edit_text_view"
+                style="@style/QuestionCardOverallStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_city_edit_text_view"
+                android:inputType="textCapWords"/>
+
+            <Button
+                android:id="@+id/enter_city_edit_text_submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:onClick="evaluateTokyoQuestionText"
+                android:padding="16dp"
+                android:text="@string/submit"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tokyo_answer_response_text"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/great_job_text"
+            android:visibility="invisible"/>
+
+        <ImageView
+        android:id="@+id/tokyo_godzilla_image"
+        style="@style/QuestionCardOverallStyle"
+        android:contentDescription="@string/tokyo_content_description"
+        android:visibility="invisible"
+        android:background="@drawable/tokyo_godzilla"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"/>
+
+        <View
+            style="@style/DividerStyle"/>
+
+        <TextView
+            android:id="@+id/kyoto_question_text_view"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/kyoto_question_text"/>
+
+        <LinearLayout
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:onClick="onKyotoRadioButtonSetClicked"
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/tokyo_radio_button"
+                    android:text="@string/tokyo_answer"/>
+
+                <RadioButton
+                    android:onClick="onKyotoRadioButtonSetClicked"
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/hiroshima_radio_button"
+                    android:text="@string/hiroshima_answer"/>
+
+                <RadioButton
+                    android:onClick="onKyotoRadioButtonSetClicked"
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/kyoto_radio_button"
+                    android:text="@string/kyoto_answer"/>
+
+                <RadioButton
+                    android:onClick="onKyotoRadioButtonSetClicked"
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/osaka_radio_button"
+                    android:text="@string/osaka_answer"/>
+
+                <RadioButton
+                    android:onClick="onKyotoRadioButtonSetClicked"
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/sapporo_radio_button"
+                    android:text="@string/sapporo_answer"/>
+            </RadioGroup>
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/kyoto_image"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/kyoto"
+                android:layout_width="0dp"
+                android:layout_height="150dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/kyoto_set_answer_text"
+            android:layout_margin="24dp"
+            android:text="@string/nice_work_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            style="@style/DividerStyle"/>
+
+        <TextView
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/tanuki_question"/>
+
+        <LinearLayout
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/tanuki_radio_button"
+                    android:text="@string/tanuki_answer"/>
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/wasabi_radio_button"
+                    android:text="@string/wasabi_answer"/>
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/shinigami_radio_button"
+                    android:text="@string/shinigami_answer"/>
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:id="@+id/shimonoseki_radio_button"
+                    android:text="@string/shimonoseki_answer"/>
+            </RadioGroup>
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/tanuki_image"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/tanuki"
+                android:layout_width="0dp"
+                android:layout_height="150dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tanuki_set_answer_text"
+            android:layout_margin="24dp"
+            android:text="@string/tanuki_bit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            style="@style/DividerStyle"/>
+
+        <TextView
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            style="@style/DividerStyle"/>
+
+        <TextView
+            android:id="@+id/player_score_text_view"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/player_score_text_view"/>
+
+        <TextView
+            android:id="@+id/player_score_display_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_total_score"/>
+
+        <TextView
+            android:id="@+id/thank_you_text_view"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/thank_you"/>
+
+        <TextView
+            android:id="@+id/artist_credit_text_view"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/artist_credit"/>
+
+        <TextView
+            android:id="@+id/artist_website_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:text="@string/artist_website"/>
+
+    </LinearLayout>
+</ScrollView>
