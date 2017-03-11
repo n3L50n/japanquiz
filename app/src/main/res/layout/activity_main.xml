@@ -15,11 +15,11 @@
             android:text="@string/welcome_text"/>
 
         <ImageView
-        android:background="@drawable/welcome"
-        android:id="@+id/welcome_image_view"
-        android:layout_margin="24dp"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"/>
+            android:id="@+id/welcome_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="24dp"
+            android:background="@drawable/welcome"/>
 
         <View
             style="@style/DividerStyle"/>
@@ -60,13 +60,13 @@
             android:visibility="invisible"/>
 
         <ImageView
-        android:id="@+id/tokyo_godzilla_image"
-        style="@style/QuestionCardOverallStyle"
-        android:contentDescription="@string/tokyo_content_description"
-        android:visibility="invisible"
-        android:background="@drawable/tokyo_godzilla"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"/>
+            android:id="@+id/tokyo_godzilla_image"
+            style="@style/QuestionCardOverallStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:background="@drawable/tokyo_godzilla"
+            android:contentDescription="@string/tokyo_content_description"
+            android:visibility="invisible"/>
 
         <View
             style="@style/DividerStyle"/>
@@ -77,64 +77,66 @@
             android:text="@string/kyoto_question_text"/>
 
         <LinearLayout
-            android:padding="16dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
 
             <RadioGroup
-                android:layout_weight="1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <RadioButton
-                    android:onClick="onKyotoRadioButtonSetClicked"
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/tokyo_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/tokyo_answer"/>
 
                 <RadioButton
-                    android:onClick="onKyotoRadioButtonSetClicked"
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/hiroshima_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/hiroshima_answer"/>
 
                 <RadioButton
-                    android:onClick="onKyotoRadioButtonSetClicked"
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/kyoto_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/kyoto_answer"/>
 
                 <RadioButton
-                    android:onClick="onKyotoRadioButtonSetClicked"
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/osaka_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/osaka_answer"/>
 
                 <RadioButton
-                    android:onClick="onKyotoRadioButtonSetClicked"
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/sapporo_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/sapporo_answer"/>
             </RadioGroup>
 
             <ImageView
-                android:visibility="invisible"
                 android:id="@+id/kyoto_image"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:background="@drawable/kyoto"
                 android:layout_width="0dp"
-                android:layout_height="150dp"/>
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/kyoto"
+                android:visibility="invisible"/>
 
         </LinearLayout>
+
         <TextView
-            android:visibility="invisible"
             android:id="@+id/kyoto_set_answer_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="24dp"
             android:text="@string/nice_work_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:visibility="invisible"/>
+
         <View
             style="@style/DividerStyle"/>
 
@@ -143,64 +145,120 @@
             android:text="@string/tanuki_question"/>
 
         <LinearLayout
-            android:padding="16dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
 
             <RadioGroup
-                android:layout_weight="1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <RadioButton
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/tanuki_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/tanuki_answer"/>
 
                 <RadioButton
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/wasabi_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/wasabi_answer"/>
 
                 <RadioButton
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/shinigami_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/shinigami_answer"/>
 
                 <RadioButton
-                    style="@style/RadioButtonStyle"
                     android:id="@+id/shimonoseki_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/shimonoseki_answer"/>
             </RadioGroup>
 
             <ImageView
-                android:visibility="invisible"
                 android:id="@+id/tanuki_image"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                android:layout_gravity="center"
                 android:background="@drawable/tanuki"
-                android:layout_width="0dp"
-                android:layout_height="150dp"/>
+                android:visibility="invisible"/>
 
         </LinearLayout>
 
         <TextView
-            android:visibility="invisible"
             android:id="@+id/tanuki_set_answer_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="24dp"
             android:text="@string/tanuki_bit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:visibility="invisible"/>
 
         <View
             style="@style/DividerStyle"/>
 
         <TextView
-            
+            style="@style/QuestionCardOverallStyle"
+            android:id="@+id/mochi_question"
+            android:text="@string/mochi_question"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/sushi_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/sushi_answer"/>
+
+                <RadioButton
+                    android:id="@+id/mochi_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/mochi_answer"/>
+
+                <RadioButton
+                    android:id="@+id/ramen_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/ramen_answer"/>
+
+                <RadioButton
+                    android:id="@+id/chashu_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/chashu_answer"/>
+
+                <RadioButton
+                    android:id="@+id/tamago_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/tamago_answer"/>
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/mochi_image"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/mochi"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/DividerStyle"/>
 
         <View
             style="@style/DividerStyle"/>

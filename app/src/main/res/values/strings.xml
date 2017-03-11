@@ -23,21 +23,22 @@
     <!--Tanuki Question set-->
     <string name="tanuki_question">What is the name of the Japanese Raccoon Dog?</string>
     <string name="tanuki_answer">Tanuki</string>
-    <string name="tanuki_bit">In Japanese culture, a Tanuki is a shapeshifting Raccoon dog often depicted with gold nuggets, perhaps some Sake, and unusually large testicles.</string>
+    <string name="tanuki_bit">Great Job! In Japanese culture, a Tanuki is a shapeshifting Raccoon dog often depicted with gold nuggets, perhaps some Sake, and unusually large testicles.</string>
     <string name="wasabi_answer">Wasabi</string>
-    <string name="wasabi_bit">A green paste used to help nullify the potential hazards of eating raw fish (Sushi).</string>
+    <string name="wasabi_bit">Incorrect. Wasabi is a green paste used to help nullify the potential hazards of eating raw fish (Sushi).</string>
     <string name="shinigami_answer">Shinigami</string>
-    <string name="shinigami_bit">God of Death</string>
+    <string name="shinigami_bit">Incorrect. Shinigami is the God of Death</string>
     <string name="shimonoseki_answer">Shimonoseki</string>
-    <string name="shimonoseki_bit">A city known for blowfish. Poison fish, poison fish, tasty fish!</string>
+    <string name="shimonoseki_bit">Incorrect. A city known for blowfish. Poison fish, poison fish, tasty fish!</string>
 
     <!--Mochi question set-->
-    <string name="mochi_question">Many foods are made with rice in Japan. What food is made with a large wooden hammer and is pounded into a sticky, gooey treat?</string>
+    <string name="mochi_question">Which foods and drinks listed below are made with rice? \nCheck all that apply.</string>
     <string name="sushi_answer">Sushi</string>
     <string name="ramen_answer">Ramen</string>
-    <string name="chaashuu_answer">Chashu</string>
+    <string name="chashu_answer">Chashu</string>
     <string name="tamago_answer">Tamago</string>
     <string name="mochi_answer">Mochi</string>
+    <string name="sake_answer">Sake</string>
 
     <!--Macaque question set-->
     <string name="arctic_monkeys_question">Which Japanese animal is notable for winter visits to spas?</string>
