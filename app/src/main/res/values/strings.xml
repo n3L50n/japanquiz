@@ -31,14 +31,22 @@
     <string name="shimonoseki_answer">Shimonoseki</string>
     <string name="shimonoseki_bit">Incorrect. A city known for blowfish. Poison fish, poison fish, tasty fish!</string>
 
-    <!--Mochi question set-->
-    <string name="mochi_question">Which foods and drinks listed below are made with rice? \nCheck all that apply.</string>
-    <string name="sushi_answer">Sushi</string>
+    <!--Rice question set-->
+    <string name="rice_question">Which foods and drinks listed below are made with rice? \nCheck all that apply.</string>
+    <string name="onigiri_answer">Onigiri</string>
+    <string name="onigiri_bit">Yes, Japanese rice balls! Keep this one checked.</string>
     <string name="ramen_answer">Ramen</string>
+    <string name="ramen_bit">Ramen? Incorrect! Ramen is not generally made with rice. Generally. Uncheck this one.</string>
     <string name="chashu_answer">Chashu</string>
+    <string name="chashu_bit">Chashu? Incorrect! Chashu is a pork dish. Uncheck this one.</string>
     <string name="tamago_answer">Tamago</string>
+    <string name="tamago_bit">Tamago? Incorrect! Tamago is an egg. Uncheck this one.</string>
     <string name="mochi_answer">Mochi</string>
+    <string name="mochi_bit">Yes! Mochi is a rice dish! Keep this one checked.</string>
     <string name="sake_answer">Sake</string>
+    <string name="sake_bit">Yes! Sake is a rice wine! Keep this one checked.</string>
+    <string name="rice_answer_default">Let\'s get started!</string>
+    <string name="rice_answer_set">That\'s all of them! Sake, onigiri, and of course, mochi!</string>
 
     <!--Macaque question set-->
     <string name="arctic_monkeys_question">Which Japanese animal is notable for winter visits to spas?</string>
@@ -55,7 +63,9 @@
     <string name="misogi_question">Misogi is a Shinto purification ritual performed on the coldest day of the year.</string>
     <string name="true_answer">True</string>
     <string name="false_answer">False</string>
-    <string name="misogi_answer">Participants purify their bodies by submersing themselves into cold water wearing next-to-nothing.</string>
+    <string name="misogi_answer_set">Think about the raw nature of Shinto.</string>
+    <string name="misogi_answer_wrong">Incorrect! Participants purify their bodies by submersing themselves into cold water wearing next-to-nothing.</string>
+    <string name="misogi_answer_right">Correct! Participants purify their bodies by submersing themselves into cold water wearing next-to-nothing.</string>
 
     <!--House entry question-->
     <string name="house_entry_question">What is a polite thing to say when entering a Japanese household?</string>

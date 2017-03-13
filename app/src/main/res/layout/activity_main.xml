@@ -204,46 +204,51 @@
             style="@style/DividerStyle"/>
 
         <TextView
+            android:id="@+id/rice_question_text_view"
             style="@style/QuestionCardOverallStyle"
-            android:id="@+id/mochi_question"
-            android:text="@string/mochi_question"/>
+            android:text="@string/rice_question"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="16dp">
 
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+            <CheckBox
+                android:id="@+id/onigiri_checkbox"
+                style="@style/CheckBoxStyle"
+                android:onClick="onRiceFoodsCheckBoxesChecked"
+                android:text="@string/onigiri_answer"/>
 
-                <RadioButton
-                    android:id="@+id/sushi_radio_button"
-                    style="@style/RadioButtonStyle"
-                    android:text="@string/sushi_answer"/>
+            <CheckBox
+                android:id="@+id/mochi_checkbox"
+                style="@style/CheckBoxStyle"
+                android:onClick="onRiceFoodsCheckBoxesChecked"
+                android:text="@string/mochi_answer"/>
 
-                <RadioButton
-                    android:id="@+id/mochi_radio_button"
-                    style="@style/RadioButtonStyle"
-                    android:text="@string/mochi_answer"/>
+            <CheckBox
+                android:id="@+id/ramen_checkbox"
+                style="@style/CheckBoxStyle"
+                android:onClick="onRiceFoodsCheckBoxesChecked"
+                android:text="@string/ramen_answer"/>
 
-                <RadioButton
-                    android:id="@+id/ramen_radio_button"
-                    style="@style/RadioButtonStyle"
-                    android:text="@string/ramen_answer"/>
+            <CheckBox
+                android:id="@+id/chashu_checkbox"
+                style="@style/CheckBoxStyle"
+                android:onClick="onRiceFoodsCheckBoxesChecked"
+                android:text="@string/chashu_answer"/>
 
-                <RadioButton
-                    android:id="@+id/chashu_radio_button"
-                    style="@style/RadioButtonStyle"
-                    android:text="@string/chashu_answer"/>
+            <CheckBox
+                android:id="@+id/tamago_checkbox"
+                style="@style/CheckBoxStyle"
+                android:onClick="onRiceFoodsCheckBoxesChecked"
+                android:text="@string/tamago_answer"/>
 
-                <RadioButton
-                    android:id="@+id/tamago_radio_button"
-                    style="@style/RadioButtonStyle"
-                    android:text="@string/tamago_answer"/>
-            </RadioGroup>
+            <CheckBox
+                android:id="@+id/sake_checkbox"
+                style="@style/CheckBoxStyle"
+                android:onClick="onRiceFoodsCheckBoxesChecked"
+                android:text="@string/sake_answer"/>
 
             <ImageView
                 android:id="@+id/mochi_image"
@@ -255,10 +260,42 @@
                 android:background="@drawable/mochi"
                 android:visibility="invisible"/>
 
+            <TextView
+                android:id="@+id/rice_set_answer_text"
+                style="@style/QuestionCardOverallStyle"
+                android:text="@string/rice_answer_default"/>
+
         </LinearLayout>
 
         <View
             style="@style/DividerStyle"/>
+
+        <TextView
+            android:id="@+id/misogi_question_text_view"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/misogi_question"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/misogi_true"
+                style="@style/RadioButtonStyle"
+                android:onClick="onMisogiQuestionChosen"
+                android:text="@string/true_answer"/>
+
+            <RadioButton
+                android:id="@+id/misogi_false"
+                style="@style/RadioButtonStyle"
+                android:onClick="onMisogiQuestionChosen"
+                android:text="@string/false_answer"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/misogi_answer_set_text"
+            android:text="@string/misogi_answer_set"
+            style="@style/QuestionCardOverallStyle"/>
 
         <View
             style="@style/DividerStyle"/>
