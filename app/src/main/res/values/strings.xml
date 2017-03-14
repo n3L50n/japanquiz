@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">JapanQuiz</string>
-    <string name="welcome_text">Welcome to the Japan quiz! \nThis is a scrolling quiz. \nTo see the next question, just scroll!</string>
+    <string name="welcome_text">Welcome to the Japan quiz!</string>
+    <string name="quiz_tips_text">\nThis is a scrolling quiz. \nTo see the next question, just scroll!</string>
 
     <!--Tokyo Question set-->
     <string name="capital_question_text">What is the Capital city of Japan?</string>
@@ -49,15 +50,16 @@
     <string name="rice_answer_set">That\'s all of them! Sake, onigiri, and of course, mochi!</string>
 
     <!--Macaque question set-->
-    <string name="arctic_monkeys_question">Which Japanese animal is notable for winter visits to spas?</string>
+    <string name="macaque_question">Which Japanese animal is notable for winter visits to spas?</string>
     <string name="macaque_answer">Macaque</string>
-    <string name="macaque_bit">The Japanese Macaque is also the northern-most living nonhuman primate, preferring colder climates that see snow a few months out of the year.</string>
+    <string name="macaque_bit">Correct! The Japanese Macaque is also the northern-most living nonhuman primate, preferring colder climates that see snow a few months out of the year.</string>
     <string name="tit_answer">Shijuukara</string>
-    <string name="tit_bit">A Japanese bush tit.</string>
+    <string name="tit_bit">Incorrect. A Japanese bush tit.</string>
     <string name="dog_answer">Inu</string>
-    <string name="dog_bit">Inu is a dog. They are notable for</string>
+    <string name="dog_bit">Incorrect. Inu is a dog.</string>
     <string name="shinkansen_answer">Shinkansen</string>
     <string name="shinkansen_bit">Like flying on land, the Shinkansen Express train can travel 150(—, &#8212;)200mph.</string>
+    <string name="macaque_answer_default">Go ahead and give it a guess!</string>
 
     <!--Misogi question-->
     <string name="misogi_question">Misogi is a Shinto purification ritual performed on the coldest day of the year.</string>
@@ -77,7 +79,7 @@
 
     <!--Thank you-->
     <string name="thank_you">Thank you for playing the Japan quiz!</string>
-    <string name="player_score_text_view">Your score is:</string>
+    <string name="player_score_text_view">Tap here to see your score.</string>
     <string name="player_total_score">0</string>
     <string name="artist_credit">All artwork in this quiz was created by Katie Heckey on her trip to Japan.</string>
     <string name="artist_website">www.katieheckey.com</string>

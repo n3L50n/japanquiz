@@ -28,10 +28,12 @@ public class MainActivity extends AppCompatActivity {
         final String answerText = tokyoEditText.getText().toString();
         final TextView tv = (TextView) findViewById(R.id.tokyo_answer_response_text);
         Button submitAnswerButton = (Button) findViewById(R.id.enter_city_edit_text_submit_button);
+
+        //TODO Dismiss keyboard after hitting return/enter
         submitAnswerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answerText.equals("Tokyo")) {
+                if (answerText.equals("Tokyo")||answerText.equals("tokyo")) {
                     tv.setText(R.string.great_job_text);
                     tv.setVisibility(View.VISIBLE);
                     quizScore += 1;
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 if (checked)
                     tv.setText(R.string.nice_work_text);
                 tv.setVisibility(View.VISIBLE);
+                quizScore += 1;
                 break;
         }
         ImageView kyotoImage = (ImageView) findViewById(R.id.kyoto_image);
@@ -154,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public void onMisogiQuestionChosen(View v) {
         boolean chosen = ((RadioButton) v).isChecked();
         TextView tv = (TextView) findViewById(R.id.misogi_answer_set_text);
@@ -166,10 +168,47 @@ public class MainActivity extends AppCompatActivity {
                     quizScore += 1;
                     break;
                 }
+            case R.id.misogi_false:
                 if (chosen) {
                     tv.setText(R.string.misogi_answer_wrong);
                     break;
                 }
+            default:
+                tv.setText(R.string.misogi_answer_set);
         }
+    }
+
+    public void onMacaqueButtonSetClicked(View v) {
+        boolean checked = ((RadioButton) v).isChecked();
+        TextView tv = (TextView) findViewById(R.id.macaque_set_answer_text);
+
+        //Check which RadioButton is selected then return correct or incorrect text depending on user answer
+
+        switch (v.getId()) {
+            case R.id.macaque_radio_button:
+                if (checked)
+                    quizScore += 1;
+                tv.setText(R.string.macaque_bit);
+                break;
+            case R.id.tit_radio_button:
+                if (checked)
+                    tv.setText(R.string.tit_bit);
+                break;
+            case R.id.dog_radio_button:
+                if (checked)
+                    tv.setText(R.string.dog_bit);
+                break;
+            case R.id.shinkansen_radio_button:
+                if (checked)
+                    tv.setText(R.string.shinkansen_bit);
+                break;
+        }
+        ImageView macaqueImage = (ImageView) findViewById(R.id.macaque_image);
+        macaqueImage.setVisibility(View.VISIBLE);
+    }
+
+    public void displayPlayerScore(View v) {
+        TextView tv = (TextView) findViewById(R.id.player_score_display_text_view);
+        tv.setText(quizScore);
     }
 }

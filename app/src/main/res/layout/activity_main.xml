@@ -11,8 +11,12 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/QuestionCardOverallStyle"
+            style="@style/WelcomeCloseStyle"
             android:text="@string/welcome_text"/>
+
+        <TextView
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/quiz_tips_text"/>
 
         <ImageView
             android:id="@+id/welcome_image_view"
@@ -208,62 +212,95 @@
             style="@style/QuestionCardOverallStyle"
             android:text="@string/rice_question"/>
 
+        <TextView
+            android:id="@+id/rice_set_answer_text"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/rice_answer_default"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <CheckBox
-                android:id="@+id/onigiri_checkbox"
-                style="@style/CheckBoxStyle"
-                android:onClick="onRiceFoodsCheckBoxesChecked"
-                android:text="@string/onigiri_answer"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/mochi_checkbox"
-                style="@style/CheckBoxStyle"
-                android:onClick="onRiceFoodsCheckBoxesChecked"
-                android:text="@string/mochi_answer"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/ramen_checkbox"
-                style="@style/CheckBoxStyle"
-                android:onClick="onRiceFoodsCheckBoxesChecked"
-                android:text="@string/ramen_answer"/>
+                    <CheckBox
+                        android:id="@+id/onigiri_checkbox"
+                        style="@style/CheckBoxStyle"
+                        android:onClick="onRiceFoodsCheckBoxesChecked"
+                        android:text="@string/onigiri_answer"/>
 
-            <CheckBox
-                android:id="@+id/chashu_checkbox"
-                style="@style/CheckBoxStyle"
-                android:onClick="onRiceFoodsCheckBoxesChecked"
-                android:text="@string/chashu_answer"/>
+                    <CheckBox
+                        android:id="@+id/mochi_checkbox"
+                        style="@style/CheckBoxStyle"
+                        android:onClick="onRiceFoodsCheckBoxesChecked"
+                        android:text="@string/mochi_answer"/>
 
-            <CheckBox
-                android:id="@+id/tamago_checkbox"
-                style="@style/CheckBoxStyle"
-                android:onClick="onRiceFoodsCheckBoxesChecked"
-                android:text="@string/tamago_answer"/>
+                </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/sake_checkbox"
-                style="@style/CheckBoxStyle"
-                android:onClick="onRiceFoodsCheckBoxesChecked"
-                android:text="@string/sake_answer"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/ramen_checkbox"
+                        style="@style/CheckBoxStyle"
+                        android:onClick="onRiceFoodsCheckBoxesChecked"
+                        android:text="@string/ramen_answer"/>
+
+                    <CheckBox
+                        android:id="@+id/chashu_checkbox"
+                        style="@style/CheckBoxStyle"
+                        android:onClick="onRiceFoodsCheckBoxesChecked"
+                        android:text="@string/chashu_answer"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/tamago_checkbox"
+                        style="@style/CheckBoxStyle"
+                        android:onClick="onRiceFoodsCheckBoxesChecked"
+                        android:text="@string/tamago_answer"/>
+
+                    <CheckBox
+                        android:id="@+id/sake_checkbox"
+                        style="@style/CheckBoxStyle"
+                        android:onClick="onRiceFoodsCheckBoxesChecked"
+                        android:text="@string/sake_answer"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/mochi_image"
-                android:layout_width="0dp"
+                android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="8dp"
-                android:layout_weight="1"
+                android:layout_margin="16dp"
                 android:background="@drawable/mochi"
-                android:visibility="invisible"/>
-
-            <TextView
-                android:id="@+id/rice_set_answer_text"
-                style="@style/QuestionCardOverallStyle"
-                android:text="@string/rice_answer_default"/>
+                android:contentDescription="Mochi Pounding"
+                android:visibility="visible"/>
 
         </LinearLayout>
 
@@ -276,6 +313,7 @@
             android:text="@string/misogi_question"/>
 
         <RadioGroup
+            android:layout_margin="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -292,17 +330,87 @@
                 android:text="@string/false_answer"/>
         </RadioGroup>
 
+        <ImageView
+            android:id="@+id/misogi_image"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/misogi"
+            android:visibility="invisible"/>
+
         <TextView
             android:id="@+id/misogi_answer_set_text"
-            android:text="@string/misogi_answer_set"
-            style="@style/QuestionCardOverallStyle"/>
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/misogi_answer_set"/>
 
         <View
             style="@style/DividerStyle"/>
 
         <TextView
+            android:id="@+id/macaque_question_text_view"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/macaque_question"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/macaque_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onMacaqueButtonSetClicked"
+                    android:text="@string/macaque_answer"/>
+
+                <RadioButton
+                    android:id="@+id/tit_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onMacaqueButtonSetClicked"
+                    android:text="@string/tit_answer"/>
+
+                <RadioButton
+                    android:id="@+id/dog_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onMacaqueButtonSetClicked"
+                    android:text="@string/dog_answer"/>
+
+                <RadioButton
+                    android:id="@+id/shinkansen_radio_button"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onTanukiButtonSetClicked"
+                    android:text="@string/shinkansen_answer"/>
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/macaque_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/macaque"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/macaque_set_answer_text"
+            style="@style/QuestionCardOverallStyle"
+            android:text="@string/macaque_answer_default"/>
+
+        <View
+            style="@style/DividerStyle"/>
+
+        <Button
             android:id="@+id/player_score_text_view"
             style="@style/QuestionCardOverallStyle"
+            android:onClick="displayPlayerScore"
             android:text="@string/player_score_text_view"/>
 
         <TextView
@@ -313,7 +421,7 @@
 
         <TextView
             android:id="@+id/thank_you_text_view"
-            style="@style/QuestionCardOverallStyle"
+            style="@style/WelcomeCloseStyle"
             android:text="@string/thank_you"/>
 
         <TextView
