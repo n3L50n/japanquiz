@@ -312,33 +312,40 @@
             style="@style/QuestionCardOverallStyle"
             android:text="@string/misogi_question"/>
 
-        <RadioGroup
-            android:layout_margin="16dp"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/misogi_true"
-                style="@style/RadioButtonStyle"
-                android:onClick="onMisogiQuestionChosen"
-                android:text="@string/true_answer"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
 
-            <RadioButton
-                android:id="@+id/misogi_false"
-                style="@style/RadioButtonStyle"
-                android:onClick="onMisogiQuestionChosen"
-                android:text="@string/false_answer"/>
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/misogi_true"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onMisogiQuestionChosen"
+                    android:text="@string/true_answer"/>
 
-        <ImageView
-            android:id="@+id/misogi_image"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/misogi"
-            android:visibility="invisible"/>
+                <RadioButton
+                    android:id="@+id/misogi_false"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="onMisogiQuestionChosen"
+                    android:text="@string/false_answer"/>
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/misogi_image"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/misogi"
+                android:visibility="visible"/>
+
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/misogi_answer_set_text"
@@ -392,7 +399,7 @@
             <ImageView
                 android:id="@+id/macaque_image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:background="@drawable/macaque"
                 android:visibility="visible"/>
@@ -410,6 +417,9 @@
         <Button
             android:id="@+id/player_score_text_view"
             style="@style/QuestionCardOverallStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:onClick="displayPlayerScore"
             android:text="@string/player_score_text_view"/>
 
@@ -417,6 +427,9 @@
             android:id="@+id/player_score_display_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp"
+            android:textStyle="bold"
             android:text="@string/player_total_score"/>
 
         <TextView
@@ -430,9 +443,11 @@
             android:text="@string/artist_credit"/>
 
         <TextView
+            style="@style/QuestionCardOverallStyle"
             android:id="@+id/artist_website_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:autoLink="web"
             android:text="@string/artist_website"/>
 

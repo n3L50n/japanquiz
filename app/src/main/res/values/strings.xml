@@ -79,7 +79,7 @@
 
     <!--Thank you-->
     <string name="thank_you">Thank you for playing the Japan quiz!</string>
-    <string name="player_score_text_view">Tap here to see your score.</string>
+    <string name="player_score_text_view">My score</string>
     <string name="player_total_score">0</string>
     <string name="artist_credit">All artwork in this quiz was created by Katie Heckey on her trip to Japan.</string>
     <string name="artist_website">www.katieheckey.com</string>

@@ -13,7 +13,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     public int quizScore = 0;
-
     public int riceCheckBoxCount = 0;
 
 
@@ -183,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.macaque_set_answer_text);
 
         //Check which RadioButton is selected then return correct or incorrect text depending on user answer
-
         switch (v.getId()) {
             case R.id.macaque_radio_button:
                 if (checked)
@@ -208,7 +206,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayPlayerScore(View v) {
+        score(quizScore);
+    }
+
+    public void score(int score){
         TextView tv = (TextView) findViewById(R.id.player_score_display_text_view);
-        tv.setText(quizScore);
+        tv.setText(String.valueOf(score));
     }
 }
