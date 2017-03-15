@@ -59,8 +59,7 @@
         <TextView
             android:id="@+id/tokyo_answer_response_text"
             style="@style/QuestionCardOverallStyle"
-            android:text="@string/great_job_text"
-            android:visibility="invisible"/>
+            android:text="@string/default_hint_tokyo_text"/>
 
         <ImageView
             android:id="@+id/tokyo_godzilla_image"
@@ -384,7 +383,7 @@
                 <RadioButton
                     android:id="@+id/shinkansen_radio_button"
                     style="@style/RadioCheckBoxStyle"
-                    android:onClick="onTanukiButtonSetClicked"
+                    android:onClick="onMacaqueButtonSetClicked"
                     android:text="@string/shinkansen_answer"/>
             </RadioGroup>
 
@@ -410,7 +409,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:onClick="displayPlayerScore"
+            android:onClick="score"
             android:text="@string/player_score_text_view"/>
 
         <TextView

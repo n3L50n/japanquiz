@@ -22,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void evaluateTokyoQuestionText(View v) {
+    /**
+     * @param view Evaluate text entered by user. If user is correct, update score and show positive text.
+     *             If user is incorrect, show negative text.
+     *             Then reveal artwork.
+     */
+    public void evaluateTokyoQuestionText(View view) {
         EditText tokyoEditText = (EditText) findViewById(R.id.enter_city_edit_text_view);
         final String answerText = tokyoEditText.getText().toString();
         final TextView tv = (TextView) findViewById(R.id.tokyo_answer_response_text);
@@ -32,13 +37,11 @@ public class MainActivity extends AppCompatActivity {
         submitAnswerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answerText.equals("Tokyo")||answerText.equals("tokyo")) {
+                if (answerText.equals("Tokyo") || answerText.equals("tokyo")) {
                     tv.setText(R.string.great_job_text);
-                    tv.setVisibility(View.VISIBLE);
                     quizScore += 1;
                 } else {
                     tv.setText(R.string.not_right);
-                    tv.setVisibility(View.VISIBLE);
                 }
                 ImageView tokyoGodzillaImage = (ImageView) findViewById(R.id.tokyo_godzilla_image);
                 tokyoGodzillaImage.setVisibility(View.VISIBLE);
@@ -47,13 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onKyotoRadioButtonSetClicked(View v) {
-        boolean checked = ((RadioButton) v).isChecked();
+    /**
+     * @param view Evaluate which Radio button was selected. If answer is correct, update score, and show text.
+     *             If incorrect show corresponding text.
+     *             Then reveal artwork
+     */
+    public void onKyotoRadioButtonSetClicked(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         TextView tv = (TextView) findViewById(R.id.kyoto_set_answer_text);
-
 //        Check which Radio is selected then return correct or incorrect text depending on user answer
 
-        switch (v.getId()) {
+        switch (view.getId()) {
 
             case R.id.hiroshima_radio_button:
             case R.id.osaka_radio_button:
@@ -75,13 +82,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onTanukiButtonSetClicked(View v) {
-        boolean checked = ((RadioButton) v).isChecked();
+    /**
+     * @param view Evaluate which Radio button was selected. If answer is correct, update score, and show text.
+     *             If incorrect show corresponding text.
+     *             Then reveal artwork
+     */
+    public void onTanukiButtonSetClicked(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         TextView tv = (TextView) findViewById(R.id.tanuki_set_answer_text);
 
         //Check which RadioButton is selected then return correct or incorrect text depending on user answer
 
-        switch (v.getId()) {
+        switch (view.getId()) {
             case R.id.shimonoseki_radio_button:
                 if (checked)
                     tv.setText(R.string.shimonoseki_bit);
@@ -108,11 +120,16 @@ public class MainActivity extends AppCompatActivity {
         tanukiImage.setVisibility(View.VISIBLE);
     }
 
-    public void onRiceFoodsCheckBoxesChecked(View v) {
-        boolean checked = ((CheckBox) v).isChecked();
+    /**
+     * @param view Listen for checkbox taps. If user selects all of the correct checkboxes, update score.
+     *             If incorrect, display incorrect text
+     */
+    //TODO Write logic to determine if user as chosen a wrong answer, then prevent quizscore from being updated.
+    public void onRiceFoodsCheckBoxesChecked(View view) {
+        boolean checked = ((CheckBox) view).isChecked();
         TextView tv = (TextView) findViewById(R.id.rice_set_answer_text);
 
-        switch (v.getId()) {
+        switch (view.getId()) {
             case R.id.onigiri_checkbox:
                 if (checked)
                     tv.setText(R.string.onigiri_bit);
@@ -156,11 +173,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onMisogiQuestionChosen(View v) {
-        boolean chosen = ((RadioButton) v).isChecked();
+    /**
+     *
+     * @param view If user chooses true, update text and score. If user chooses false, update text but not score.
+     */
+    public void onMisogiQuestionChosen(View view) {
+        boolean chosen = ((RadioButton) view).isChecked();
         TextView tv = (TextView) findViewById(R.id.misogi_answer_set_text);
 
-        switch (v.getId()) {
+        switch (view.getId()) {
             case R.id.misogi_true:
                 if (chosen) {
                     tv.setText(R.string.misogi_answer_right);
@@ -177,12 +198,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onMacaqueButtonSetClicked(View v) {
-        boolean checked = ((RadioButton) v).isChecked();
+    /**
+     * @param view Evaluate which Radio button was selected. If answer is correct, update score, and show text.
+     *             If incorrect show corresponding text.
+     *             Then reveal artwork
+     */
+    public void onMacaqueButtonSetClicked(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
         TextView tv = (TextView) findViewById(R.id.macaque_set_answer_text);
 
         //Check which RadioButton is selected then return correct or incorrect text depending on user answer
-        switch (v.getId()) {
+        switch (view.getId()) {
             case R.id.macaque_radio_button:
                 if (checked)
                     quizScore += 1;
@@ -205,11 +231,19 @@ public class MainActivity extends AppCompatActivity {
         macaqueImage.setVisibility(View.VISIBLE);
     }
 
-    public void displayPlayerScore(View v) {
-        score(quizScore);
+    /**
+     *
+     * @param view Capture player's score
+     */
+    public void score(View view) {
+        displayPlayerScore(quizScore);
     }
 
-    public void score(int score){
+    /**
+     *
+     * @param score Display score in view
+     */
+    public void displayPlayerScore(int score) {
         TextView tv = (TextView) findViewById(R.id.player_score_display_text_view);
         tv.setText(String.valueOf(score));
     }

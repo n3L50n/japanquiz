@@ -4,6 +4,7 @@
     <string name="quiz_tips_text">\nThis is a scrolling quiz. \nTo see the next question, just scroll!</string>
 
     <!--Tokyo Question set-->
+    <string name="default_hint_tokyo_text">Tap submit to reveal answer</string>
     <string name="capital_question_text">What is the Capital city of Japan?</string>
     <string name="enter_city_edit_text_view">Enter city guess here</string>
     <string name="submit">Submit</string>
@@ -58,7 +59,7 @@
     <string name="dog_answer">Inu</string>
     <string name="dog_bit">Incorrect. Inu is a dog.</string>
     <string name="shinkansen_answer">Shinkansen</string>
-    <string name="shinkansen_bit">Like flying on land, the Shinkansen Express train can travel 150(—, &#8212;)200mph.</string>
+    <string name="shinkansen_bit">Incorrect. Like flying on land, the Shinkansen Express train can travel 150&#8212;200mph.</string>
     <string name="macaque_answer_default">Go ahead and give it a guess!</string>
 
     <!--Misogi question-->
