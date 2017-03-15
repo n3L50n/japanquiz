@@ -2,5 +2,8 @@
 <resources>
     <dimen name="welcome_close_title">24sp</dimen>
     <dimen name="question_text_size">16sp</dimen>
+    <dimen name="player_score">24sp</dimen>
     <dimen name="divider_height">1dp</dimen>
+    <dimen name="general_padding_margin">16dp</dimen>
+    <dimen name="large_padding_margin">24dp</dimen>
 </resources>

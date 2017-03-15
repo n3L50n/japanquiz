@@ -20,9 +20,8 @@
 
         <ImageView
             android:id="@+id/welcome_image_view"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_margin="24dp"
+            style="@style/FullImageViewStyle"
+            android:layout_margin="@dimen/large_padding_margin"
             android:background="@drawable/welcome"/>
 
         <View
@@ -35,7 +34,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/general_padding_margin"
             android:orientation="vertical">
 
             <EditText
@@ -53,7 +52,7 @@
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
                 android:onClick="evaluateTokyoQuestionText"
-                android:padding="16dp"
+                android:padding="@dimen/general_padding_margin"
                 android:text="@string/submit"/>
         </LinearLayout>
 
@@ -84,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="@dimen/general_padding_margin">
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -93,31 +92,31 @@
 
                 <RadioButton
                     android:id="@+id/tokyo_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/tokyo_answer"/>
 
                 <RadioButton
                     android:id="@+id/hiroshima_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/hiroshima_answer"/>
 
                 <RadioButton
                     android:id="@+id/kyoto_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/kyoto_answer"/>
 
                 <RadioButton
                     android:id="@+id/osaka_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/osaka_answer"/>
 
                 <RadioButton
                     android:id="@+id/sapporo_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onKyotoRadioButtonSetClicked"
                     android:text="@string/sapporo_answer"/>
             </RadioGroup>
@@ -152,7 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="@dimen/general_padding_margin">
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -161,25 +160,25 @@
 
                 <RadioButton
                     android:id="@+id/tanuki_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/tanuki_answer"/>
 
                 <RadioButton
                     android:id="@+id/wasabi_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/wasabi_answer"/>
 
                 <RadioButton
                     android:id="@+id/shinigami_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/shinigami_answer"/>
 
                 <RadioButton
                     android:id="@+id/shimonoseki_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/shimonoseki_answer"/>
             </RadioGroup>
@@ -200,7 +199,7 @@
             android:id="@+id/tanuki_set_answer_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
+            android:layout_margin="@dimen/large_padding_margin"
             android:text="@string/tanuki_bit"
             android:visibility="invisible"/>
 
@@ -220,30 +219,29 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="@dimen/general_padding_margin"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="14dp"
+                    android:layout_margin="@dimen/general_padding_margin"
                     android:orientation="vertical">
 
                     <CheckBox
                         android:id="@+id/onigiri_checkbox"
-                        style="@style/CheckBoxStyle"
+                        style="@style/RadioCheckBoxStyle"
                         android:onClick="onRiceFoodsCheckBoxesChecked"
                         android:text="@string/onigiri_answer"/>
 
                     <CheckBox
                         android:id="@+id/mochi_checkbox"
-                        style="@style/CheckBoxStyle"
+                        style="@style/RadioCheckBoxStyle"
                         android:onClick="onRiceFoodsCheckBoxesChecked"
                         android:text="@string/mochi_answer"/>
 
@@ -252,18 +250,18 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="14dp"
+                    android:layout_margin="@dimen/general_padding_margin"
                     android:orientation="vertical">
 
                     <CheckBox
                         android:id="@+id/ramen_checkbox"
-                        style="@style/CheckBoxStyle"
+                        style="@style/RadioCheckBoxStyle"
                         android:onClick="onRiceFoodsCheckBoxesChecked"
                         android:text="@string/ramen_answer"/>
 
                     <CheckBox
                         android:id="@+id/chashu_checkbox"
-                        style="@style/CheckBoxStyle"
+                        style="@style/RadioCheckBoxStyle"
                         android:onClick="onRiceFoodsCheckBoxesChecked"
                         android:text="@string/chashu_answer"/>
 
@@ -272,18 +270,18 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="14dp"
+                    android:layout_margin="@dimen/general_padding_margin"
                     android:orientation="vertical">
 
                     <CheckBox
                         android:id="@+id/tamago_checkbox"
-                        style="@style/CheckBoxStyle"
+                        style="@style/RadioCheckBoxStyle"
                         android:onClick="onRiceFoodsCheckBoxesChecked"
                         android:text="@string/tamago_answer"/>
 
                     <CheckBox
                         android:id="@+id/sake_checkbox"
-                        style="@style/CheckBoxStyle"
+                        style="@style/RadioCheckBoxStyle"
                         android:onClick="onRiceFoodsCheckBoxesChecked"
                         android:text="@string/sake_answer"/>
 
@@ -294,10 +292,8 @@
 
             <ImageView
                 android:id="@+id/mochi_image"
-                android:layout_width="300dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
+                style="@style/FullImageViewStyle"
+                android:layout_margin="@dimen/general_padding_margin"
                 android:background="@drawable/mochi"
                 android:contentDescription="Mochi Pounding"
                 android:visibility="visible"/>
@@ -319,28 +315,24 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp">
+                android:layout_margin="@dimen/general_padding_margin">
 
                 <RadioButton
                     android:id="@+id/misogi_true"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onMisogiQuestionChosen"
                     android:text="@string/true_answer"/>
 
                 <RadioButton
                     android:id="@+id/misogi_false"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onMisogiQuestionChosen"
                     android:text="@string/false_answer"/>
             </RadioGroup>
 
             <ImageView
                 android:id="@+id/misogi_image"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="8dp"
-                android:layout_weight="1"
+                style="@style/FullImageViewStyle"
                 android:background="@drawable/misogi"
                 android:visibility="visible"/>
 
@@ -364,7 +356,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/general_padding_margin">
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -373,34 +365,32 @@
 
                 <RadioButton
                     android:id="@+id/macaque_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onMacaqueButtonSetClicked"
                     android:text="@string/macaque_answer"/>
 
                 <RadioButton
                     android:id="@+id/tit_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onMacaqueButtonSetClicked"
                     android:text="@string/tit_answer"/>
 
                 <RadioButton
                     android:id="@+id/dog_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onMacaqueButtonSetClicked"
                     android:text="@string/dog_answer"/>
 
                 <RadioButton
                     android:id="@+id/shinkansen_radio_button"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioCheckBoxStyle"
                     android:onClick="onTanukiButtonSetClicked"
                     android:text="@string/shinkansen_answer"/>
             </RadioGroup>
 
             <ImageView
                 android:id="@+id/macaque_image"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
+                style="@style/FullImageViewStyle"
                 android:background="@drawable/macaque"
                 android:visibility="visible"/>
 
@@ -428,9 +418,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="@string/player_total_score"/>
+            android:text="@string/player_total_score"
+            android:textSize="@dimen/player_score"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/thank_you_text_view"
@@ -443,11 +433,8 @@
             android:text="@string/artist_credit"/>
 
         <TextView
-            style="@style/QuestionCardOverallStyle"
             android:id="@+id/artist_website_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            style="@style/QuestionCardOverallStyle"
             android:autoLink="web"
             android:text="@string/artist_website"/>
 
