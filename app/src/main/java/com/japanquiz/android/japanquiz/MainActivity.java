@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         final TextView tv = (TextView) findViewById(R.id.tokyo_answer_response_text);
         Button submitAnswerButton = (Button) findViewById(R.id.enter_city_edit_text_submit_button);
 
-        //TODO Dismiss keyboard after hitting return/enter
         submitAnswerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -174,7 +173,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
      * @param view If user chooses true, update text and score. If user chooses false, update text but not score.
      */
     public void onMisogiQuestionChosen(View view) {
@@ -232,15 +230,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
      * @param view Capture player's score
      */
     public void score(View view) {
+        if (quizScore > 6) {
+            quizScore = 6;
+        }
         displayPlayerScore(quizScore);
     }
 
     /**
-     *
      * @param score Display score in view
      */
     public void displayPlayerScore(int score) {
