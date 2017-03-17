@@ -9,4 +9,8 @@
     <dimen name="godzilla_image_height">200dp</dimen>
     <dimen name="kyoto_image_height">150dp</dimen>
     <dimen name="tanuki_image_height">150dp</dimen>
+    <dimen name="divider_margin_top">48dp</dimen>
+    <dimen name="divider_margin_bottom">48dp</dimen>
+    <dimen name="radio_checkbox_margin_bottom">8dp</dimen>
+    <dimen name="image_view_height">150dp</dimen>
 </resources>

@@ -9,7 +9,7 @@
     </style>
 
     <style name="QuestionCardOverallStyle">
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@color/question_card_text_color</item>
         <item name="android:textSize">@dimen/question_text_size</item>
         <item name="android:layout_margin">@dimen/large_padding_margin</item>
         <item name="android:layout_width">match_parent</item>
@@ -18,7 +18,7 @@
     </style>
 
     <style name="WelcomeCloseStyle">
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@color/question_card_text_color</item>
         <item name="android:textSize">@dimen/welcome_close_title</item>
         <item name="android:layout_margin">@dimen/large_padding_margin</item>
         <item name="android:layout_width">match_parent</item>
@@ -27,11 +27,11 @@
     </style>
 
     <style name="DividerStyle">
-        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/divider_color</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/divider_height</item>
-        <item name="android:layout_marginTop">48dp</item>
-        <item name="android:layout_marginBottom">48dp</item>
+        <item name="android:layout_marginTop">@dimen/divider_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/divider_margin_bottom</item>
         <item name="android:layout_marginRight">@dimen/large_padding_margin</item>
         <item name="android:layout_marginLeft">@dimen/large_padding_margin</item>
     </style>
@@ -39,12 +39,12 @@
     <style name="RadioCheckBoxStyle">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginBottom">@dimen/radio_checkbox_margin_bottom</item>
     </style>
 
     <style name="FullImageViewStyle">
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_height">@dimen/image_view_height</item>
         <item name="android:layout_width">match_parent</item>
     </style>
 
