@@ -47,4 +47,5 @@
         <item name="android:layout_height">150dp</item>
         <item name="android:layout_width">match_parent</item>
     </style>
+
 </resources>

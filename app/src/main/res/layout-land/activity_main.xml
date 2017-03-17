@@ -21,7 +21,7 @@
         <ImageView
             android:contentDescription="@string/welcome_description"
             android:id="@+id/welcome_image_view"
-            style="@style/FullImageViewStyle"
+            style="@style/FullImageViewStyleLandscape"
             android:layout_margin="@dimen/large_padding_margin"
             android:background="@drawable/welcome"/>
 
@@ -64,9 +64,7 @@
 
         <ImageView
             android:id="@+id/tokyo_godzilla_image"
-            style="@style/QuestionCardOverallStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            style="@style/FullImageViewStyleLandscape"
             android:background="@drawable/tokyo_godzilla"
             android:contentDescription="@string/tokyo_content_description"
             android:visibility="invisible"/>
@@ -125,7 +123,7 @@
                 android:contentDescription="@string/kyoto_description"
                 android:id="@+id/kyoto_image"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:background="@drawable/kyoto"
@@ -186,12 +184,12 @@
 
             <ImageView
                 android:id="@+id/tanuki_image"
+                android:contentDescription="@string/tanuki_description"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                android:contentDescription="@string/tanuki_description"
                 android:background="@drawable/tanuki"
                 android:visibility="invisible"/>
 
@@ -294,7 +292,7 @@
 
             <ImageView
                 android:id="@+id/mochi_image"
-                style="@style/FullImageViewStyle"
+                style="@style/FullImageViewStyleLandscape"
                 android:layout_margin="@dimen/general_padding_margin"
                 android:background="@drawable/mochi"
                 android:contentDescription="@string/rice_description"
@@ -333,9 +331,9 @@
             </RadioGroup>
 
             <ImageView
-                android:contentDescription="@string/misogi_description"
                 android:id="@+id/misogi_image"
-                style="@style/FullImageViewStyle"
+                android:contentDescription="@string/misogi_description"
+                style="@style/FullImageViewStyleLandscape"
                 android:background="@drawable/misogi"
                 android:visibility="visible"/>
 
@@ -393,8 +391,8 @@
 
             <ImageView
                 android:id="@+id/macaque_image"
-                style="@style/FullImageViewStyle"
                 android:contentDescription="@string/macaque_description"
+                style="@style/FullImageViewStyleLandscape"
                 android:background="@drawable/macaque"
                 android:visibility="visible"/>
 

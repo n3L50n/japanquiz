@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -233,10 +234,13 @@ public class MainActivity extends AppCompatActivity {
      * @param view Capture player's score
      */
     public void score(View view) {
+        // Check that player's score does not go over the number of questions.
         if (quizScore > 6) {
             quizScore = 6;
         }
         displayPlayerScore(quizScore);
+        Toast toast = Toast.makeText(this, "Your score is: " + String.valueOf(quizScore), Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     /**

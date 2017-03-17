@@ -84,6 +84,15 @@
     <string name="player_total_score">0</string>
     <string name="artist_credit">All artwork in this quiz was created by Katie Heckey on her trip to Japan.</string>
     <string name="artist_website">www.katieheckey.com</string>
-    <string name="tokyo_content_description">Tokyo Godzilla sketch</string>
+    <string name="score">Your score is: </string>
+
+    <!--Content Descriptions-->
+    <string name="welcome_description">A watercolor illustration of a shrine in Japan</string>
+    <string name="kyoto_description">A watercolor illustration of the great 24 meter gate in Kyoto</string>
+    <string name="tokyo_content_description">A sketch of Tokyo with Godzilla behind it in red</string>
+    <string name="tanuki_description">An illustration of a Japanese raccoon dog</string>
+    <string name="rice_description">An sketch of Mochi pounding in Japan</string>
+    <string name="misogi_description">A sketch of Misogi cleansing ceremony</string>
+    <string name="macaque_description">An illustration of arctic monkeys in a bath tub</string>
 
 </resources>
