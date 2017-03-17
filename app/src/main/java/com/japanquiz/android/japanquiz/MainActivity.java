@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
             quizScore = 6;
         }
         displayPlayerScore(quizScore);
-        Toast toast = Toast.makeText(this, "Your score is: " + String.valueOf(quizScore), Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, "Your score is: " + String.valueOf(quizScore) + "/6", Toast.LENGTH_SHORT);
         toast.show();
     }
 

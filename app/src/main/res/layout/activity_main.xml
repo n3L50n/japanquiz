@@ -19,11 +19,11 @@
             android:text="@string/quiz_tips_text"/>
 
         <ImageView
-            android:contentDescription="@string/welcome_description"
             android:id="@+id/welcome_image_view"
             style="@style/FullImageViewStyle"
             android:layout_margin="@dimen/large_padding_margin"
-            android:background="@drawable/welcome"/>
+            android:background="@drawable/welcome"
+            android:contentDescription="@string/welcome_description"/>
 
         <View
             style="@style/DividerStyle"/>
@@ -66,7 +66,7 @@
             android:id="@+id/tokyo_godzilla_image"
             style="@style/QuestionCardOverallStyle"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/godzilla_image_height"
             android:background="@drawable/tokyo_godzilla"
             android:contentDescription="@string/tokyo_content_description"
             android:visibility="invisible"/>
@@ -122,13 +122,13 @@
             </RadioGroup>
 
             <ImageView
-                android:contentDescription="@string/kyoto_description"
                 android:id="@+id/kyoto_image"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/kyoto_image_height"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:background="@drawable/kyoto"
+                android:contentDescription="@string/kyoto_description"
                 android:visibility="invisible"/>
 
         </LinearLayout>
@@ -137,7 +137,7 @@
             android:id="@+id/kyoto_set_answer_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
+            android:layout_margin="@dimen/large_padding_margin"
             android:text="@string/nice_work_text"
             android:visibility="invisible"/>
 
@@ -187,12 +187,12 @@
             <ImageView
                 android:id="@+id/tanuki_image"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/tanuki_image_height"
                 android:layout_gravity="center"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="@dimen/general_padding_margin"
                 android:layout_weight="1"
-                android:contentDescription="@string/tanuki_description"
                 android:background="@drawable/tanuki"
+                android:contentDescription="@string/tanuki_description"
                 android:visibility="invisible"/>
 
         </LinearLayout>
@@ -333,10 +333,10 @@
             </RadioGroup>
 
             <ImageView
-                android:contentDescription="@string/misogi_description"
                 android:id="@+id/misogi_image"
                 style="@style/FullImageViewStyle"
                 android:background="@drawable/misogi"
+                android:contentDescription="@string/misogi_description"
                 android:visibility="visible"/>
 
 
@@ -394,8 +394,8 @@
             <ImageView
                 android:id="@+id/macaque_image"
                 style="@style/FullImageViewStyle"
-                android:contentDescription="@string/macaque_description"
                 android:background="@drawable/macaque"
+                android:contentDescription="@string/macaque_description"
                 android:visibility="visible"/>
 
         </LinearLayout>

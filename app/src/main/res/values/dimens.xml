@@ -6,4 +6,7 @@
     <dimen name="divider_height">1dp</dimen>
     <dimen name="general_padding_margin">16dp</dimen>
     <dimen name="large_padding_margin">24dp</dimen>
+    <dimen name="godzilla_image_height">200dp</dimen>
+    <dimen name="kyoto_image_height">150dp</dimen>
+    <dimen name="tanuki_image_height">150dp</dimen>
 </resources>
