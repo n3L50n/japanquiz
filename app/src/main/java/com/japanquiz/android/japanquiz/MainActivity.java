@@ -13,9 +13,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public int quizScore = 0;
+    public int tokyoScore = 0;
+    public int kyotoScore = 0;
+    public int tanukiScore = 0;
+    public int riceScore = 0;
+    public int misogiScore = 0;
+    public int macaqueScore = 0;
     public int riceCheckBoxCount = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +41,12 @@ public class MainActivity extends AppCompatActivity {
         submitAnswerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answerText.equals("Tokyo") || answerText.equals("tokyo")) {
+                if (answerText.equalsIgnoreCase("Tokyo")) {
                     tv.setText(R.string.great_job_text);
-                    quizScore += 1;
+                    tokyoScore = 1;
                 } else {
                     tv.setText(R.string.not_right);
+                    tokyoScore = 0;
                 }
                 ImageView tokyoGodzillaImage = (ImageView) findViewById(R.id.tokyo_godzilla_image);
                 tokyoGodzillaImage.setVisibility(View.VISIBLE);
@@ -69,12 +74,13 @@ public class MainActivity extends AppCompatActivity {
                 if (checked)
                     tv.setText(R.string.incorrect_text);
                 tv.setVisibility(View.VISIBLE);
+                kyotoScore = 0;
                 break;
             case R.id.kyoto_radio_button:
                 if (checked)
                     tv.setText(R.string.nice_work_text);
                 tv.setVisibility(View.VISIBLE);
-                quizScore += 1;
+                kyotoScore = 1;
                 break;
         }
         ImageView kyotoImage = (ImageView) findViewById(R.id.kyoto_image);
@@ -98,22 +104,25 @@ public class MainActivity extends AppCompatActivity {
                 if (checked)
                     tv.setText(R.string.shimonoseki_bit);
                 tv.setVisibility(View.VISIBLE);
+                tanukiScore = 0;
                 break;
             case R.id.wasabi_radio_button:
                 if (checked)
                     tv.setText(R.string.wasabi_bit);
                 tv.setVisibility(View.VISIBLE);
+                tanukiScore = 0;
                 break;
             case R.id.shinigami_radio_button:
                 if (checked)
                     tv.setText(R.string.shinigami_bit);
                 tv.setVisibility(View.VISIBLE);
+                tanukiScore = 0;
                 break;
             case R.id.tanuki_radio_button:
                 if (checked)
                     tv.setText(R.string.tanuki_bit);
                 tv.setVisibility(View.VISIBLE);
-                quizScore += 1;
+                tanukiScore = 1;
                 break;
         }
         ImageView tanukiImage = (ImageView) findViewById(R.id.tanuki_image);
@@ -124,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view Listen for checkbox taps. If user selects all of the correct checkboxes, update score.
      *             If incorrect, display incorrect text
      */
-    //TODO Write logic to determine if user as chosen a wrong answer, then prevent quizscore from being updated.
+    //TODO Write logic to determine if user has chosen a wrong answer, then prevent quizscore from being updated.
     public void onRiceFoodsCheckBoxesChecked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
         TextView tv = (TextView) findViewById(R.id.rice_set_answer_text);
@@ -135,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                     tv.setText(R.string.onigiri_bit);
                 riceCheckBoxCount += 1;
                 if (riceCheckBoxCount == 3) {
-                    quizScore += 1;
+                    riceScore += 1;
                     tv.setText(R.string.rice_answer_set);
                 }
                 break;
@@ -145,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                 riceCheckBoxCount += 1;
                 if (riceCheckBoxCount == 3) {
                     tv.setText(R.string.rice_answer_set);
-                    quizScore += 1;
+                    riceScore += 1;
                 }
                 break;
             case R.id.sake_checkbox:
@@ -154,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 riceCheckBoxCount += 1;
                 if (riceCheckBoxCount == 3) {
                     tv.setText(R.string.rice_answer_set);
-                    quizScore += 1;
+                    riceScore += 1;
                 }
                 break;
             case R.id.tamago_checkbox:
@@ -179,17 +188,17 @@ public class MainActivity extends AppCompatActivity {
     public void onMisogiQuestionChosen(View view) {
         boolean chosen = ((RadioButton) view).isChecked();
         TextView tv = (TextView) findViewById(R.id.misogi_answer_set_text);
-
         switch (view.getId()) {
             case R.id.misogi_true:
                 if (chosen) {
                     tv.setText(R.string.misogi_answer_right);
-                    quizScore += 1;
+                    misogiScore = 1;
                     break;
                 }
             case R.id.misogi_false:
                 if (chosen) {
                     tv.setText(R.string.misogi_answer_wrong);
+                    misogiScore = 0;
                     break;
                 }
             default:
@@ -210,20 +219,23 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.macaque_radio_button:
                 if (checked)
-                    quizScore += 1;
+                    macaqueScore = 1;
                 tv.setText(R.string.macaque_bit);
                 break;
             case R.id.tit_radio_button:
                 if (checked)
                     tv.setText(R.string.tit_bit);
+                    macaqueScore = 0;
                 break;
             case R.id.dog_radio_button:
                 if (checked)
                     tv.setText(R.string.dog_bit);
+                    macaqueScore = 0;
                 break;
             case R.id.shinkansen_radio_button:
                 if (checked)
                     tv.setText(R.string.shinkansen_bit);
+                    macaqueScore = 0;
                 break;
         }
         ImageView macaqueImage = (ImageView) findViewById(R.id.macaque_image);
@@ -235,11 +247,13 @@ public class MainActivity extends AppCompatActivity {
      */
     public void score(View view) {
         // Check that player's score does not go over the number of questions.
-        if (quizScore > 6) {
-            quizScore = 6;
+
+        int sum = tokyoScore + kyotoScore + tanukiScore + misogiScore + riceScore + macaqueScore;
+        if (sum > 6) {
+            sum = 6;
         }
-        displayPlayerScore(quizScore);
-        Toast toast = Toast.makeText(this, "Your score is: " + String.valueOf(quizScore) + "/6", Toast.LENGTH_SHORT);
+        displayPlayerScore(sum);
+        Toast toast = Toast.makeText(this, "Your score is: " + String.valueOf(sum) + "/6", Toast.LENGTH_SHORT);
         toast.show();
     }
 
